@@ -74,7 +74,7 @@
 pip3 install pipenv
 pipenv --three
 pipenv install
-pipenv shell
+pipenv shell 
 ```
 * pygraphviz (For visualizing Finite State Machine)
     * [Setup pygraphviz on Ubuntu](http://www.jianshu.com/p/a3da7ecc5303)
