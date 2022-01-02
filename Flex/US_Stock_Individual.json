@@ -1,0 +1,473 @@
+{
+  "type": "carousel",
+  "contents": [
+    {
+      "type": "bubble",
+      "size": "micro",
+      "hero": {
+        "type": "image",
+        "url": "https://i.imgur.com/DSMX4bJ.png",
+        "size": "full",
+        "aspectMode": "fit",
+        "aspectRatio": "320:213"
+      },
+      "body": {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "text",
+            "text": "AMD Inc.",
+            "weight": "bold",
+            "size": "sm",
+            "wrap": true,
+            "decoration": "none",
+            "offsetTop": "none",
+            "align": "center"
+          }
+        ],
+        "spacing": "sm",
+        "paddingAll": "13px"
+      },
+      "action": {
+        "type": "message",
+        "label": "AMD",
+        "text": "AMD"
+      },
+      "styles": {
+        "body": {
+          "backgroundColor": "#C0C0C0"
+        }
+      }
+    },
+    {
+      "type": "bubble",
+      "size": "micro",
+      "hero": {
+        "type": "image",
+        "url": "https://i.imgur.com/i8AAkp2.png",
+        "size": "full",
+        "aspectMode": "fit",
+        "aspectRatio": "320:213"
+      },
+      "body": {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "text",
+            "text": "Alphabet Inc.",
+            "weight": "bold",
+            "size": "sm",
+            "wrap": true,
+            "decoration": "none",
+            "offsetTop": "none",
+            "align": "center"
+          }
+        ],
+        "spacing": "sm",
+        "paddingAll": "13px"
+      },
+      "action": {
+        "type": "message",
+        "label": "Google",
+        "text": "GOOGL"
+      },
+      "styles": {
+        "body": {
+          "backgroundColor": "#C0C0C0"
+        }
+      }
+    },
+    {
+      "type": "bubble",
+      "size": "micro",
+      "hero": {
+        "type": "image",
+        "url": "https://i.imgur.com/Hl27yt9.png",
+        "size": "full",
+        "aspectMode": "fit",
+        "aspectRatio": "320:213"
+      },
+      "body": {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "text",
+            "text": "Amazon.com, Inc.",
+            "weight": "bold",
+            "size": "sm",
+            "wrap": true,
+            "decoration": "none",
+            "offsetTop": "none",
+            "align": "center"
+          }
+        ],
+        "spacing": "sm",
+        "paddingAll": "13px"
+      },
+      "action": {
+        "type": "message",
+        "label": "Amazon",
+        "text": "AMZN"
+      },
+      "styles": {
+        "body": {
+          "backgroundColor": "#C0C0C0"
+        }
+      }
+    },
+    {
+      "type": "bubble",
+      "size": "micro",
+      "hero": {
+        "type": "image",
+        "url": "https://i.imgur.com/opaEOpj.png",
+        "size": "full",
+        "aspectMode": "fit",
+        "aspectRatio": "320:213"
+      },
+      "body": {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "text",
+            "text": "Apple Inc.",
+            "weight": "bold",
+            "size": "sm",
+            "wrap": true,
+            "decoration": "none",
+            "offsetTop": "none",
+            "align": "center"
+          }
+        ],
+        "spacing": "sm",
+        "paddingAll": "13px"
+      },
+      "action": {
+        "type": "message",
+        "label": "Apple",
+        "text": "AAPL"
+      },
+      "styles": {
+        "body": {
+          "backgroundColor": "#C0C0C0"
+        }
+      }
+    },
+    {
+      "type": "bubble",
+      "size": "micro",
+      "hero": {
+        "type": "image",
+        "url": "https://i.imgur.com/Qd6HQDI.png",
+        "size": "full",
+        "aspectMode": "fit",
+        "aspectRatio": "320:213"
+      },
+      "body": {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "text",
+            "text": "ASML Holding N.V.",
+            "weight": "bold",
+            "size": "sm",
+            "wrap": true,
+            "decoration": "none",
+            "offsetTop": "none",
+            "align": "center"
+          }
+        ],
+        "spacing": "sm",
+        "paddingAll": "13px"
+      },
+      "action": {
+        "type": "message",
+        "label": "ASML",
+        "text": "ASML"
+      },
+      "styles": {
+        "body": {
+          "backgroundColor": "#C0C0C0"
+        }
+      }
+    },
+    {
+      "type": "bubble",
+      "size": "micro",
+      "hero": {
+        "type": "image",
+        "url": "https://i.imgur.com/ow1tODL.png",
+        "size": "full",
+        "aspectMode": "fit",
+        "aspectRatio": "320:213"
+      },
+      "body": {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "text",
+            "text": "Costco Wholesale Corporation",
+            "weight": "bold",
+            "size": "sm",
+            "wrap": true,
+            "decoration": "none",
+            "offsetTop": "none",
+            "align": "center"
+          }
+        ],
+        "spacing": "sm",
+        "paddingAll": "13px"
+      },
+      "action": {
+        "type": "message",
+        "label": "COSTCO",
+        "text": "COST"
+      },
+      "styles": {
+        "body": {
+          "backgroundColor": "#C0C0C0"
+        }
+      }
+    },
+    {
+      "type": "bubble",
+      "size": "micro",
+      "hero": {
+        "type": "image",
+        "url": "https://i.imgur.com/9bjzHTp.png",
+        "size": "full",
+        "aspectMode": "fit",
+        "aspectRatio": "320:213"
+      },
+      "body": {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "text",
+            "text": "Intel Corporation",
+            "weight": "bold",
+            "size": "sm",
+            "wrap": true,
+            "decoration": "none",
+            "offsetTop": "none",
+            "align": "center"
+          }
+        ],
+        "spacing": "sm",
+        "paddingAll": "13px"
+      },
+      "action": {
+        "type": "message",
+        "label": "INTEL",
+        "text": "INTC"
+      },
+      "styles": {
+        "body": {
+          "backgroundColor": "#C0C0C0"
+        }
+      }
+    },
+    {
+      "type": "bubble",
+      "size": "micro",
+      "hero": {
+        "type": "image",
+        "url": "https://i.imgur.com/8untUff.png",
+        "size": "full",
+        "aspectMode": "fit",
+        "aspectRatio": "320:213"
+      },
+      "body": {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "text",
+            "text": "Microsoft Corporation",
+            "weight": "bold",
+            "size": "sm",
+            "wrap": true,
+            "decoration": "none",
+            "offsetTop": "none",
+            "align": "center"
+          }
+        ],
+        "spacing": "sm",
+        "paddingAll": "13px"
+      },
+      "action": {
+        "type": "message",
+        "label": "MSFT",
+        "text": "MSFT"
+      },
+      "styles": {
+        "body": {
+          "backgroundColor": "#C0C0C0"
+        }
+      }
+    },
+    {
+      "type": "bubble",
+      "size": "micro",
+      "hero": {
+        "type": "image",
+        "url": "https://i.imgur.com/IrcHqdQ.png",
+        "size": "full",
+        "aspectMode": "fit",
+        "aspectRatio": "320:213"
+      },
+      "body": {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "text",
+            "text": "Netflix Inc.",
+            "weight": "bold",
+            "size": "sm",
+            "wrap": true,
+            "decoration": "none",
+            "offsetTop": "none",
+            "align": "center"
+          }
+        ],
+        "spacing": "sm",
+        "paddingAll": "13px"
+      },
+      "action": {
+        "type": "message",
+        "label": "NFLX",
+        "text": "NFLX"
+      },
+      "styles": {
+        "body": {
+          "backgroundColor": "#C0C0C0"
+        }
+      }
+    },
+    {
+      "type": "bubble",
+      "size": "micro",
+      "hero": {
+        "type": "image",
+        "url": "https://i.imgur.com/LfIO7kO.png",
+        "size": "full",
+        "aspectMode": "fit",
+        "aspectRatio": "320:213"
+      },
+      "body": {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "text",
+            "text": "Nvidia Corporation",
+            "weight": "bold",
+            "size": "sm",
+            "wrap": true,
+            "decoration": "none",
+            "offsetTop": "none",
+            "align": "center"
+          }
+        ],
+        "spacing": "sm",
+        "paddingAll": "13px"
+      },
+      "action": {
+        "type": "message",
+        "label": "NVDA",
+        "text": "NVDA"
+      },
+      "styles": {
+        "body": {
+          "backgroundColor": "#C0C0C0"
+        }
+      }
+    },
+    {
+      "type": "bubble",
+      "size": "micro",
+      "hero": {
+        "type": "image",
+        "url": "https://i.imgur.com/91cJnpq.png",
+        "size": "full",
+        "aspectMode": "fit",
+        "aspectRatio": "320:213"
+      },
+      "body": {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "text",
+            "text": "Tesla Inc.",
+            "weight": "bold",
+            "size": "sm",
+            "wrap": true,
+            "decoration": "none",
+            "offsetTop": "none",
+            "align": "center"
+          }
+        ],
+        "spacing": "sm",
+        "paddingAll": "13px"
+      },
+      "action": {
+        "type": "message",
+        "label": "action",
+        "text": "TSLA"
+      },
+      "styles": {
+        "body": {
+          "backgroundColor": "#C0C0C0"
+        }
+      }
+    },
+    {
+      "type": "bubble",
+      "size": "micro",
+      "hero": {
+        "type": "image",
+        "url": "https://i.imgur.com/G643yOv.png",
+        "size": "full",
+        "aspectMode": "fit",
+        "aspectRatio": "320:213"
+      },
+      "body": {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "text",
+            "text": "Qualcomm Inc.",
+            "weight": "bold",
+            "size": "sm",
+            "wrap": true,
+            "decoration": "none",
+            "offsetTop": "none",
+            "align": "center"
+          }
+        ],
+        "spacing": "sm",
+        "paddingAll": "13px"
+      },
+      "action": {
+        "type": "message",
+        "label": "QCOM",
+        "text": "QCOM"
+      },
+      "styles": {
+        "body": {
+          "backgroundColor": "#C0C0C0"
+        }
+      }
+    }
+  ]
+}
