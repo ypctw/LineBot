@@ -1,40 +1,85 @@
-# TOC Project 2020
+# TOC Project 2022
+## 前言 :
+2021年全年台股上漲3486.31點，如今已經站到萬八大關。比特幣也在2021四月中旬，站上65,000美元。因此作者認為，我們應該要跟上這個時代的腳步。因此想設計一個LinBot聊天機器人協助我們看台灣與國際股市。
 
-[![Maintainability](https://api.codeclimate.com/v1/badges/dc7fa47fcd809b99d087/maintainability)](https://codeclimate.com/github/NCKU-CCS/TOC-Project-2020/maintainability)
+## 構想
+藉由`yahoo 股市`、`Coinbase` 與 `台灣證券交易所 Taiwan Stock Exchange(TWSE)`的公開資源，及時地顯示出股價以及K線。
 
-[![Known Vulnerabilities](https://snyk.io/test/github/NCKU-CCS/TOC-Project-2020/badge.svg)](https://snyk.io/test/github/NCKU-CCS/TOC-Project-2020)
+用簡單的方式提供選項，另外也可以讓使用者自行手動輸入股票代碼，解決不同人的問題。
 
-
-Template Code for TOC Project 2020
-
-A Line bot based on a finite state machine
-
-More details in the [Slides](https://hackmd.io/@TTW/ToC-2019-Project#) and [FAQ](https://hackmd.io/s/B1Xw7E8kN)
-
+## Environment
+* Python 3.8
+* Windows Subsystem for Linux ( Ubuntu20.04 )
+* Heroku
+## Tech
+* Web Crawling : 
+  * 利用爬蟲的方式，抓取目前股價
+* Deploy:
+  * 透過雲端部屬的方式，建立伺服器，
+## Functionality
+* pandas
+  * 利用爬進來的資料，畫出 K線，SMA(日均線)，並且自動上傳到雲端上，送到使用者的LINE上
+* yfinance
+  * 爬取美股的目前的交易情形
+* TWSE Api
+  * 爬取台股目前交易情形
+* 
+## Finite State Machine
+![fsm](./fsm.png)
+### State
+1. `User` : 使用者一加入時，隨便輸入便可以開始使用相關功能
+2. `Start`: 主選單，可以連結到兩大功能 `今日股市`、`近期股票分析`
+3. `Search`: 選擇為`Crytro`或是`Stock`
+4. `Crytro`: 跳出七種貨幣供使用者選擇(目前主流或作者熟識的幣種 `BTC`、`BAT`、`ETH`、`BNB`、`BTC`、`DOGE`、`SHIB`)
+   1. 若上述沒有使用者想要的幣種，可以文字輸入幣種的代碼，以呈現出目前幣價。
+5. `Crytro_Fetch`: 爬取該虛擬貨幣的幣價，並以圖文方式呈現，且呈現出 `USD` 與 `TWD` 的價格，並以按鈕 `繼續搜尋` (search)與 `探索其他功能`(start)分別去不同地方
+6. `Stock`: 可以連結到兩大股票位置 `台灣股市`、 `美國股市`
+7. `Stock_TW`: 跳出多個常見股票供使用者選擇
+   1. 若上述沒有使用者想要的幣種，可以文字輸入股票代號，以呈現出目前幣價。
+   2. 呈現的常見股票是作者曾經或現在關注的股票
+8. `Stock_TW_Fetch`: 爬取該股票的交易情形，並以圖文方式呈現。
+   1. 且呈現出`目前的指數`，`上升或下降的比率`(以不同顏色表示)
+      1. **作者使用的是台灣的表示法**，與美國的表示法略有不同
+         1. 紅色：股價走揚
+         2. 綠色：股價走低
+         3. 灰色：與昨天收盤價相當，股價持平
+   2. 並以按鈕 `繼續查詢`(search) 與 `離開`(start) 分別去不同地方
+9. `Stock_US`: 可以連結到兩大美股常用功能 `美股大盤指數`、 `個別股市`
+10. `Stock_Index` : 呈現出四種美股指數 `NASDAQ-100`、`NASDAQ`、`S&P 500標普500`、`Dow Jones工業指數`
+11. `Stock_Indivisual`: 跳出多個常見股票供使用者選擇
+    1. 若上述沒有使用者想要的股票，可以文字輸入股票代號，以呈現出目前幣價。
+    2. 呈現的常見股票是作者曾經或現在關注的股票 (主要為NASDAQ中的科技概念股)
+12. `Stock_US_Index_Four` : 呈現出目前的美國指數
+13. `Stock_US_Fetch` : 呈現出目前的美國指數
+    1. 且呈現出`目前的指數`，`上升或下降的比率`(以不同顏色表示)
+    2. **作者使用的是台灣的表示法**，與美國的表示法略有不同
+       1. 紅色：股價走揚
+       2. 綠色：股價走低
+       3. 灰色：與昨天收盤價相當，股價持平
+    3. 並以按鈕 `繼續查詢`(search) 與 `離開`(start) 分別去不同地方
+14. `SMA` : 呈現出`台股短線`、`美股短線`、`台股中線`、`美股中線`、`台股長線`、`美股長線`
+    1. 以`我要分析`進入到不同的
+15. `SMA_S`，`SMA_M`、`SMA_L`、`SMA_S_US`、`SMA_M_US`、`SMA_L_US`: 跳出多個常見股票供使用者選擇 
+    1. 若上述沒有使用者想要的股票，可以文字輸入股票代號，以呈現出目前幣價。
+    2. 呈現的常見股票是作者曾經或現在關注的股票
+16. `S_Stock`，`M_Stock`，`L_Stock`，`S_Stock_US`，`M_Stock_US`，`L_Stock_US`：
+    1. 爬取相對應的股票，並且運用資料分析，畫出圖之後，並且上傳到雲端上，再傳送到使用者的Line手機裡
 ## Setup
-
 ### Prerequisite
-* Python 3.6
+* Python 3.8
 * Pipenv
-* Facebook Page and App
-* HTTPS Server
 
 #### Install Dependency
 ```sh
 pip3 install pipenv
-
 pipenv --three
-
 pipenv install
-
 pipenv shell
 ```
-
 * pygraphviz (For visualizing Finite State Machine)
     * [Setup pygraphviz on Ubuntu](http://www.jianshu.com/p/a3da7ecc5303)
 	* [Note: macOS Install error](https://github.com/pygraphviz/pygraphviz/issues/100)
-
-
+	
 #### Secret Data
 You should generate a `.env` file to set Environment Variables refer to our `.env.sample`.
 `LINE_CHANNEL_SECRET` and `LINE_CHANNEL_ACCESS_TOKEN` **MUST** be set to proper values.
@@ -44,60 +89,26 @@ Otherwise, you might not be able to run your code.
 You can either setup https server or using `ngrok` as a proxy.
 
 #### a. Ngrok installation
-* [ macOS, Windows, Linux](https://ngrok.com/download)
-
-or you can use Homebrew (MAC)
-```sh
-brew cask install ngrok
-```
-
 **`ngrok` would be used in the following instruction**
-
+##### Linux
 ```sh
-ngrok http 8000
+sudo apt-get install ngrok
 ```
-
-After that, `ngrok` would generate a https URL.
-
 #### Run the sever
-
 ```sh
 python3 app.py
 ```
-
-#### b. Servo
-
-Or You can use [servo](http://serveo.net/) to expose local servers to the internet.
-
-
-## Finite State Machine
-![fsm](./img/show-fsm.png)
-
-## Usage
-The initial state is set to `user`.
-
-Every time `user` state is triggered to `advance` to another state, it will `go_back` to `user` state after the bot replies corresponding message.
-
-* user
-	* Input: "go to state1"
-		* Reply: "I'm entering state1"
-
-	* Input: "go to state2"
-		* Reply: "I'm entering state2"
+#### Run on other terminal
+```sh
+ngrok http 8000
+```
+After that, `ngrok` would generate a https URL.
 
 ## Deploy
 Setting to deploy webhooks on Heroku.
 
 ### Heroku CLI installation
-
-* [macOS, Windows](https://devcenter.heroku.com/articles/heroku-cli)
-
-or you can use Homebrew (MAC)
-```sh
-brew tap heroku/brew && brew install heroku
-```
-
-or you can use Snap (Ubuntu 16+)
+you can use Snap (Ubuntu 16+)
 ```sh
 sudo snap install --classic heroku
 ```

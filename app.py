@@ -11,7 +11,7 @@ from fsm import TocMachine
 from utils import send_text_message
 
 load_dotenv()
-
+USER_ID = {}
 
 machine = TocMachine(
     states=["user","Start",
@@ -171,7 +171,9 @@ def webhook_handler():
     # get request body as text
     body = request.get_data(as_text=True)
     app.logger.info(f"Request body: {body}")
-
+    print("____________________________________________________________________")
+    print(body)
+    print("____________________________________________________________________")
     # parse webhook body
     try:
         events = parser.parse(body, signature)
@@ -189,6 +191,7 @@ def webhook_handler():
         response = machine.advance(event)
         if response == False:
             send_text_message(event.reply_token, "Not Entering any State")
+
     return "OK"
 
 
