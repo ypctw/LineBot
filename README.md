@@ -1,4 +1,8 @@
 # TOC Project 2022
+## LineBot
+![img.png](Image/img_2.png)
+![img.png](Image/img.png)
+
 ## 前言 :
 2021年全年台股上漲3486.31點，如今已經站到萬八大關。比特幣也在2021四月中旬，站上65,000美元。因此作者認為，我們應該要跟上這個時代的腳步。因此想設計一個LinBot聊天機器人協助我們看台灣與國際股市。
 
@@ -23,7 +27,6 @@
   * 爬取美股的目前的交易情形
 * TWSE Api
   * 爬取台股目前交易情形
-* 
 ## Finite State Machine
 ![fsm](./fsm.png)
 ### State
@@ -31,7 +34,6 @@
 2. `Start`: 主選單，可以連結到兩大功能 `今日股市`、`近期股票分析`
 3. `Search`: 選擇為`Crytro`或是`Stock`
 4. `Crytro`: 跳出七種貨幣供使用者選擇(目前主流或作者熟識的幣種 `BTC`、`BAT`、`ETH`、`BNB`、`BTC`、`DOGE`、`SHIB`)
-   1. 若上述沒有使用者想要的幣種，可以文字輸入幣種的代碼，以呈現出目前幣價。
 5. `Crytro_Fetch`: 爬取該虛擬貨幣的幣價，並以圖文方式呈現，且呈現出 `USD` 與 `TWD` 的價格，並以按鈕 `繼續搜尋` (search)與 `探索其他功能`(start)分別去不同地方
 6. `Stock`: 可以連結到兩大股票位置 `台灣股市`、 `美國股市`
 7. `Stock_TW`: 跳出多個常見股票供使用者選擇
@@ -64,6 +66,28 @@
     2. 呈現的常見股票是作者曾經或現在關注的股票
 16. `S_Stock`，`M_Stock`，`L_Stock`，`S_Stock_US`，`M_Stock_US`，`L_Stock_US`：
     1. 爬取相對應的股票，並且運用資料分析，畫出圖之後，並且上傳到雲端上，再傳送到使用者的Line手機裡
+###  模擬圖
+1. 起始畫面
+   1. ![img_1.png](Image/img_1.png)
+#### 第一大功能 (今日股市)
+1. 虛擬貨幣
+   1. ![img_3.png](Image/img_3.png)
+   2. ![img_4.png](Image/img_4.png)
+2. 台股
+   1. ![img_5.png](Image/img_5.png)
+   2. ![img_6.png](Image/img_6.png) 
+3. 美股(指數)
+   1. ![img_7.png](Image/img_7.png)
+   2. ![img_8.png](Image/img_8.png)
+4. 美股(個別股)
+   1. ![img_9.png](Image/img_9.png)
+   2. ![img_10.png](Image/img_10.png)
+#### 第二大功能 ()
+1. ![img_11.png](Image/img_11.png)
+2. ![img_12.png](Image/img_12.png)
+3. ![img_13.png](Image/img_13.png)
+4. ![img_14.png](Image/img_14.png)
+
 ## Setup
 ### Prerequisite
 * Python 3.8
