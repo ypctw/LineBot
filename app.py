@@ -188,7 +188,7 @@ def webhook_handler():
         if not isinstance(event.message.text, str):
             continue
         if event.source.user_id not in USER_ID:
-            print(f"Create ! {events.source.user_id}")
+            print(f"Create ! {event.source.user_id}")
             USER_ID[event.source.user_id] = createMachine()
 
         response = USER_ID[event.source.user_id].advance(event)
