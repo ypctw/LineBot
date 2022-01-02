@@ -1,11 +1,11 @@
-from transitions.extensions import GraphMachine
+from transitions import Machine
 from linebot.models import ImageSendMessage, ImageCarouselColumn, URITemplateAction, MessageTemplateAction, TemplateSendMessage,ImageCarouselTemplate,FlexSendMessage
 from API.Stock import TaiwanStock, USAStock, CryptoStock
 from API.Flex_message import Flex_Message_Crypto, TW_Stock_Each
 from API.SimpleMovingAverage import SimpleMovingAverage as SMA
 import json
 from utils import send_text_message, send_button_message_NoneURL, send_Multi_Image, send_Flex_message, CountDay,send_button_message_URL
-class TocMachine(GraphMachine):
+class TocMachine(Machine):
     def __init__(self, **machine_configs):
         self.machine = GraphMachine(model=self, **machine_configs)
         self.TW_STOCK = TaiwanStock()
