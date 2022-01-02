@@ -189,9 +189,9 @@ def webhook_handler():
             continue
         if event.source.user_id not in USER_ID:
             print(f"Create ! {events.source.user_id}")
-            USER_ID[events.source.user_id] = createMachine()
+            USER_ID[event.source.user_id] = createMachine()
 
-        response = USER_ID[events.source.user_id].advance(event)
+        response = USER_ID[event.source.user_id].advance(event)
         print(f'{event.source.user_id}--->{USER_ID[event.source.user_id].state}')
         if response == False:
             send_text_message(event.reply_token, "找不到指令\n還是你只是想找我聊天哩")
