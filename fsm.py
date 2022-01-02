@@ -7,7 +7,7 @@ import json
 from utils import send_text_message, send_button_message_NoneURL, send_Multi_Image, send_Flex_message, CountDay,send_button_message_URL
 class TocMachine(Machine):
     def __init__(self, **machine_configs):
-        self.machine = GraphMachine(model=self, **machine_configs)
+        self.machine = Machine(model=self, **machine_configs)
         self.TW_STOCK = TaiwanStock()
         self.US_STOCK = USAStock()
         self.CRYPTO_STOCK = CryptoStock()
